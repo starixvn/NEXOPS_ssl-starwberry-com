@@ -1,0 +1,22 @@
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+[req_distinguished_name]
+countryName = VN
+countryName_default = VN
+stateOrProvinceName = HCM
+stateOrProvinceName_default = HCM
+localityName = NX
+localityName_default = NX
+organizationalUnitName = 12B
+organizationalUnitName_default = 12B
+commonName = starwberry.com
+commonName_max = 64
+[ v3_req ]
+# Extensions to add to a certificate request
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = starwberry.com
+DNS.2 = *.nx-opsaws.starwberry.com
